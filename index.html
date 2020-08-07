@@ -5,71 +5,113 @@
 
 		<style type="text/css">
 			#profile { 
-				border:2px solid #000; position:absolute; top:6%; left:3%; width:114px; height:150px; 
+				border:2px solid #000; position:fixed; top:6%; left:2%; width:114px; height:150px; 
 			}
 			#profile_name {
-				color: #000; position:absolute; top:30%; left:3%; font-family: "Times New Roman";
-				font-size: 18px;
-			}
-			#profile_email {
-				color: #000; position:absolute; top:34%; left:3%; font-family: "Times New Roman";
+				color: #000; position:fixed; top:30%; left:2%; font-family: "Arial";
 				font-size: 18px;
 			}
 			#profile_location {
-				color: #000; position:absolute; top:38%; left:3%; font-family: "Times New Roman";
+				color: #000; position:fixed; top:34%; left:2%; font-family: "Arial";
 				font-size: 18px;
 			}
 			#profile_occupation {
-				color: #000; position:absolute; top:42%; left:3%; font-family: "Times New Roman";
+				color: #000; position:fixed; top:38%; left:2%; font-family: "Arial";
+				font-size: 18px;
+			}
+			#profile_email {
+				color: #000; position:fixed; top:42%; left:2%; font-family: "Arial";
 				font-size: 18px;
 			}
 			#profile_github {
-				color: #000; position:absolute; top:46%; left:3%; font-family: "Times New Roman";
+				color: #000; position:fixed; top:46%; left:2%; font-family: "Arial";
 				font-size: 18px;
 			}
 			#profile_youtube {
-				color: #000; position:absolute; top:50%; left:3%; font-family: "Times New Roman";
+				color: #000; position:fixed; top:50%; left:2%; font-family: "Arial";
 				font-size: 18px;
 			}
-			.vl {
-  				border-left: 5px solid #333;
-  				height: 100%;
-  				position: absolute;
-  				left: 25%;
+			#profile_linkedin {
+				color: #000; position:fixed; top:54%; left:2%; font-family: "Arial";
+				font-size: 18px;
 			}
-			.split {
-  				height: 100%;
+			.split1 {
+  				height: 95%;
   				width: 25%;
 				position: fixed;
   				z-index: 1;
-  				top: 0;
+  				top: 1%;
+  				overflow-x: hidden;
+  				padding-top: 20px;
+			}
+			.split2 {
+  				height: 95%;
+  				width: 71%;
+				position: fixed;
+  				z-index: 1;
+  				top: 1%;
   				overflow-x: hidden;
   				padding-top: 20px;
 			}
 			.left {
 				left: 1%;
 				background-color: #997;
+				border: 3px solid #222;
+			}
+			.right {
+				left: 27%;
+				background-color: #965;
+				border: 3px solid #222;
+			}
+			#bio_heading { 
+				font-family: "Arial"; font-size: 20px; position:absolute; top:6%; left:3%;
+			}
+			#bio_body { 
+				font-family: "Arial"; font-size: 18px; position:absolute; top:8%; left:3%;
+			}
+			#projects_heading { 
+				font-family: "Arial"; font-size: 20px; position:absolute; top:30%; left:3%;
+			}
+			#projects_body1 { 
+				font-family: "Arial"; font-size: 18px; position:absolute; top:36%; left:6%;
+			}
+			#projects_body2 { 
+				font-family: "Arial"; font-size: 18px; position:absolute; top:150%; left:6%;
 			}
 		</style>
 	</head>
 
-	<body style="background-color: #555">
-		<div class="vl"> </div>
-
-		<div class="split left">
+	<body style="background-color: #444">
+		<div class="split1 left">
 			<img id="profile" src="data/images/profile/Akash_ProfilePhoto.jpg" alt="Profile Photo">
 			<h3 id="profile_name"> Name: Akash Shankar </h3>
-			<h3 id="profile_email"> Email: akashshankar29@gmail.com </h3>
 			<h3 id="profile_location"> Location: Bangalore, India </h3>
-			<h3 id="profile_occupation"> Occupation: CS Undergraduate </h3>
-			<a href="https://www.github.com/akashbujju" target="_blank"> <h3 id="profile_github"> Github: github.com/akashbujju </h3></a>
-			<a href="https://www.youtube.com/channel/UCeW8lUGhTgYGORVK0Dq-qTQ" target="_blank"> <h3 id="profile_youtube"> Youtube: Akash Shankar </h3></a>
+			<h3 id="profile_occupation"> Occupation: CS undergrad </h3>
+			<h3 id="profile_email"> Email: <u>akashshankar29@gmail.com</u> </h3>
+			<a href="https://www.github.com/akashbujju" target="_blank"> <h3 id="profile_github">Github: <u>github.com/akashbujju</u> </h3></a>
+			<a href="https://www.youtube.com/channel/UCeW8lUGhTgYGORVK0Dq-qTQ" target="_blank"> <h3 id="profile_youtube"> Youtube: <u>akashshankar</u> </h3></a>
+			<a href="https://www.linkedin.com/in/akashbujju" target="_blank"> <h3 id="profile_linkedin"> LinkedIn: <u>akashbujju</u> </h3></a>
 		</div>
 
-		<!--
-		<video width="800" height="600" controls>
-			<source src="data/videos/DoDSimProgress.mp4" type="video/mp4">
-		</video> 
-		-->
+		<div class="split2 right">
+			<ul>
+				<li id="bio_heading"> <u>Short Bio</u> </li>
+				<p id="bio_body"> I am a computer science undergrad living in <u>Bangalore</u>, India. I am a student, programmer, video gamer, and a daydreamer. <u>Computer graphics</u> and <u>Simulation</u> are my areas of interest. Personality-wise, introversion, and curiosity go well in hand with my interests. My short term career <u>goal</u> is to become a good programmer and an <u>independent developer</u>, and the long term goal is to run my own <u>video games company</u>! A long way to go, but what better of a way to start than to apply to <u>grad schools</u> in the United States.</p>
+
+				<li id="projects_heading"> <u>Projects</u> </li>
+				<ol>
+					<li id="projects_body1"> 
+						<u> Data-oriented Computer Simulation: </u> <br><br>
+						<i> Document link: </i><a href="data/reports/DoDSimReport.pdf" target="_blank">DoDSim.pdf</a> &nbsp
+						<i> Github link: </i><a href="https://github.com/AkashBujju/Data-Oriented-Computer-Simulation" target="_blank">Data-oriented Computer simulation</a>
+						<video width="800" height="600" controls>
+ 						<source src="data/videos/test.mp4" type="video/mp4"></video> 
+					</li>
+
+					<li id="projects_body2"> <u> Programming based puzzle video game: </li>
+				</ol>
+			</ul>
+			
+		</div>
 	</body>
 </html>
